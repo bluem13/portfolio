@@ -17,41 +17,39 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkVisibility);
     checkVisibility(); // Initial check in case it's already in view
 });
-//header scrolling visibilty
+//header scroll visibility
 document.addEventListener('DOMContentLoaded', function() {
-    const headerSection = document.getElementById('header');
+    const header = document.querySelector('header'); // Make sure to target your header correctly
 
-    function checkVisibility() {
-        const rect = headerSection.getBoundingClientRect();
-        const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight) ||
-                          (rect.bottom >= 0 && rect.top <= window.innerHeight);
+    function checkHeaderVisibility() {
+        const rect = header.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0; // Adjust your visibility condition as needed
 
         if (isVisible) {
-            headerSection.classList.add('visible');
+            header.classList.add('visible');
         } else {
-            headerSection.classList.remove('visible');
+            header.classList.remove('visible');
         }
     }
 
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Initial check in case it's already in view
+    window.addEventListener('scroll', checkHeaderVisibility);
+    checkHeaderVisibility(); // Initial check
 });
-//footer scrolling visibility
+//footer scroll visibility
 document.addEventListener('DOMContentLoaded', function() {
-    const footerSection = document.getElementById('footer');
+    const footer = document.querySelector('footer'); // Make sure to target your header correctly
 
-    function checkVisibility() {
-        const rect = footerSection.getBoundingClientRect();
-        const isVisible = (rect.top >= 0 && rect.bottom <= window.innerHeight) ||
-                          (rect.bottom >= 0 && rect.top <= window.innerHeight);
+    function checkFooterVisibility() {
+        const rect = footer.getBoundingClientRect();
+        const isVisible = rect.top < window.innerHeight && rect.bottom > 0; // Adjust your visibility condition as needed
 
         if (isVisible) {
-            footerSection.classList.add('visible');
+            footer.classList.add('visible');
         } else {
-            footerSection.classList.remove('visible');
+            footer.classList.remove('visible');
         }
     }
 
-    window.addEventListener('scroll', checkVisibility);
-    checkVisibility(); // Initial check in case it's already in view
+    window.addEventListener('scroll', checkFooterVisibility);
+    checkFooterVisibility(); // Initial check
 });
