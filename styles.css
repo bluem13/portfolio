@@ -4,11 +4,17 @@ header{
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-style: oblique;
     font-weight: bolder;
-    
     color:#007BFF;
-  
+   opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 1.0s ease-in-out, transform 1.0s ease-in-out; /* Smooth transition */
 }
 #aboutText {
+    opacity: 0; 
+    transform: translateY(50px); 
+    transition: opacity 1.0s ease-in-out, transform 1.0s ease-in-out; /* Smooth transition */
+}
+footer {
     opacity: 0; 
     transform: translateY(50px); 
     transition: opacity 1.0s ease-in-out, transform 1.0s ease-in-out; /* Smooth transition */
