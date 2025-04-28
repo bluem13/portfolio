@@ -1,8 +1,39 @@
 header{
-    font-size: 20px;
-    font-style: italic;
-    text-shadow: 3cm;
-    color:blue;
-    border: solid;
+    padding-top: 200px;
+    font-size: 75px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: oblique;
+    font-weight: bolder;
+    
+    color:#007BFF;
+  
 }
 
+nav{
+    padding-top: 50px;
+}
+nav a {
+    text-decoration: none;
+    color: #333;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background-color 0.3s, color 0.3s;
+}
+nav a:hover {
+    background-color: #007BFF;
+    color: #fff;
+  }
+nav a:not(:last-child) {
+    margin-right: 10px;
+  }
+  h1{
+    color: #007BFF;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: lighter;
+    font-display: block;
+  }
+
+  p1{
+   font-size: 18px;
+   padding-top: 10px;
+  }
