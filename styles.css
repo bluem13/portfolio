@@ -11,7 +11,7 @@ header{
 #aboutText {
     opacity: 0; 
     transform: translateY(50px); 
-    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Smooth transition */
+    transition: opacity 1.0s ease-in-out, transform 1.0s ease-in-out; /* Smooth transition */
 }
 
 #aboutText.visible {
