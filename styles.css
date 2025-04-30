@@ -109,6 +109,8 @@ object-fit: fill;
 }
 
 iframe{
+width: 100%;
+
  margin-top: 50px;
  border: none;
 }
