@@ -39,7 +39,13 @@ footer.visible {
   transform: translateY(0);
 }
 nav{
-    padding-top: 50px;
+    padding-top: 20px;
+    align-items: center; /* Center items horizontally */   
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    
+ 
 }
 nav a {
     text-decoration: none;
@@ -47,6 +53,7 @@ nav a {
     padding: 10px 20px;
     border-radius: 50px;
     transition: background-color 0.3s, color 0.3s;
+    
 }
 nav a:hover {
     background-color: #007BFF;
@@ -71,7 +78,7 @@ nav a:not(:last-child) {
   }
 
   .container p1 {
-    width: 50%;
+    width: 75%;
   }
 
   p1{
@@ -100,3 +107,9 @@ object-fit: fill;
     opacity: 0.5; /* Adjust opacity as needed */
     object-fit: cover; /* Cover the entire viewport */
 }
+
+iframe{
+ margin-top: 50px;
+ border: none;
+}
+
