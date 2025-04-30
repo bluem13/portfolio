@@ -1,3 +1,6 @@
+//csp
+
+
 //about scrolling visibilty
 document.addEventListener('DOMContentLoaded', function() {
     const aboutMeSection = document.getElementById('aboutText');
@@ -53,23 +56,3 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkFooterVisibility);
     checkFooterVisibility();
 });
-
-//button increase/decrease font size
-document.addEventListener('DOMContentLoaded', function() {
-    const increaseFontButton = document.getElementById('increase-font');
-    const resetButton = document.getElementById('decrease-font');
-    const contentToAdjust = document.getElementById('content-to-adjust'); // Or document.body, or another selector
-  
-    const defaultFontSize = parseFloat(window.getComputedStyle(contentToAdjust).fontSize);
-    const step = 2; // Adjust the increment/decrement value as needed
-    const maxFontSize = 30; // Optional: Maximum font size
-  
-    increaseFontButton.addEventListener('click', function() {
-      let currentFontSize = parseFloat(window.getComputedStyle(contentToAdjust).fontSize);
-      let newFontSize = Math.min(currentFontSize + step, maxFontSize); // Ensure it doesn't exceed max
-      contentToAdjust.style.fontSize = `${newFontSize}px`;
-    });
-    resetButton.addEventListener('click', function() {
-        contentToAdjust.style.fontSize = `${defaultFontSize}px`;});
-  });
-
