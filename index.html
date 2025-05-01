@@ -1,8 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-    Content-Security-Policy: default-src 'self'; script-src 'self'; style-src 'self';
-    Content-Security-Policy: script-src 'self';
+   
     <head>
+        <link rel="icon" sizes="16x16" href="favicon-16x16.png">
+        <link rel="icon" sizes="32x32" href="favicon-32x32.png">
+        <link rel="icon" sizes="192x192" href="android-chrome-192x192.png">
+        <link rel="icon" sizes="512x512" href="android-chrome-512x512.png">
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Portfolio</title>  
@@ -11,6 +14,10 @@
     <script src="script.js"></script>
     <body>
        <img id = "background" src = "luke-chesser-3rWagdKBF7U-unsplash.jpg" alt="free to use background image created by Luke Chesser"></img>
+       <img id = "background2" src = "xinyi-wen-KAgGjw4HgNY-unsplash.jpg" alt="free to use background image created by Xinyi Wen"></img>
+       <img id = "background3" src = "dave-hoefler-PEkfSAxeplg-unsplash.jpg" alt="free to use background image created by Dave Hoefler"></img>
+       <img id = "background4" src = "daniele-levis-pelusi-jfF1DBzdhho-unsplash.jpg" alt="free to use background image created by Daniele Levis"></img>
+       
         <div class="container"><header id="top">Hi, I'm Matthew!</header>
         <img id = "portfolioPicture" src = "portfolioPicture.png" alt="Picture of me"></img>
         <nav>
@@ -39,32 +46,33 @@
             <section id = "projects">
             <h1>Projects</h1></div>
             <div class="container"><h2>These projects were created in Comp Sci 201</h2></div>
-            <nav>
-                <a href=#GTN>Guess the Number</a>
-                <a href=#ttt>tic-tac-toe</a>
-                <a href=#snake>Snake</a>
-                <a href=#RPC>Rock Paper Scissors</a>
+            <nav class=""iframe-nav>
+                <a href=#GTN onclick="showIframe('GTN'); return false;">Guess the Number</a>
+                <a href=#ttt onclick="showIframe('ttt'); return false;">tic-tac-toe</a>
+                <a href=#snake onclick="showIframe('snake'); return false;">Snake</a>
+                <a href=#RPC onclick="showIframe('RPC'); return false;">Rock Paper Scissors</a>
             </nav>
 
-        
-        <iframe src="GTN.html" id="GTN" width="600" height="600"></iframe>
-        <iframe src="ttt.html" id="ttt" width="600" height="600"></iframe>
-        <iframe src="snake.html" id="snake" width="600" height="600"></iframe>
-        <iframe src="RPC.html" id="RPC" width="6000" height="600"></iframe>
-        
+    <div class ="iframe-container">    
+        <iframe src="GTN.html" id="GTN" width="600" height="600" style="display: block;"></iframe>
+        <iframe src="ttt.html" id="ttt" width="600" height="600" style = "display: none;"></iframe>
+        <iframe src="snake.html" id="snake" width="600" height="600" style = "display: none;"></iframe>
+        <iframe src="RPC.html" id="RPC" width="6000" height="600" style = "display: none;"></iframe>
+        </div>
     </section>
 
-        <section id = "contact">
-            <h3>Contact</h3>
-            <a id="mail" href="mailto:bluem13@uwgb.edu">Email</a>
-
-        </section></div>
+  
         <nav>
             <a href=#projects>Back to projects</a>
         
             <a href=#about>Back to About Me</a>
             <a href=#top>Back to top</a>
         </nav>
+        <section id = "contact">
+            <h3>Contact</h3>
+            <a id="mail" href="mailto:bluem13@uwgb.edu">Email</a>
+
+        </section></div>
     </main>
         <footer>UWGB Comp Sci 201 - Matthew Bluett</footer>
    

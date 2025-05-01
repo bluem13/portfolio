@@ -1,5 +1,3 @@
-//csp
-
 
 //about scrolling visibilty
 document.addEventListener('DOMContentLoaded', function() {
@@ -56,3 +54,39 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('scroll', checkFooterVisibility);
     checkFooterVisibility();
 });
+
+document.addEventListener('DOMContentLoaded', function() {
+    const increaseFontButton = document.getElementById('increase-font');
+    const resetButton = document.getElementById('decrease-font'); // Renamed for clarity
+    const contentToAdjust = document.getElementById('content-to-adjust'); // Or document.body, or another selector
+  
+    const defaultFontSize = parseFloat(window.getComputedStyle(contentToAdjust).fontSize);
+    const step = 2; // Adjust the increment/decrement value as needed
+    const maxFontSize = 30; // Optional: Maximum font size
+  
+    increaseFontButton.addEventListener('click', function() {
+      let currentFontSize = parseFloat(window.getComputedStyle(contentToAdjust).fontSize);
+      let newFontSize = Math.min(currentFontSize + step, maxFontSize); // Ensure it doesn't exceed max
+      contentToAdjust.style.fontSize = `${newFontSize}px`;
+    });
+  
+    resetButton.addEventListener('click', function() {
+      contentToAdjust.style.fontSize = `${defaultFontSize}px`;
+    });
+  });
+
+  function showIframe(iframeId) {
+    // Get all iframe elements within the container
+    const iframes = document.querySelectorAll('.iframe-container iframe');
+  
+    // Hide all iframes
+    iframes.forEach(iframe => {
+      iframe.style.display = 'none';
+    });
+  
+    // Show the selected iframe
+    const selectedIframe = document.getElementById(iframeId);
+    if (selectedIframe) {
+      selectedIframe.style.display = 'block';
+    }
+  }
